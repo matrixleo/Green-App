@@ -6,6 +6,8 @@ import { ProjectsScreenComponent } from './Screens/projects-screen/projects-scre
 import { RoofingScreenComponent } from './Screens/projects-screen/roofing-screen/roofing-screen.component';
 import { RestorationScreenComponent } from './Screens/projects-screen/restoration-screen/restoration-screen.component';
 import { ConstructionScreenComponent } from './Screens/projects-screen/construction-screen/construction-screen.component';
+import {ProjectDetailGuard} from "./Screens/projects-screen/project-detail.guard";
+import {DetailsScreenComponent} from "./Screens/projects-screen/details-screen/details-screen.component";
 const routes: Routes = [
   {path:'', component: ScreenComponent,
   children : [
@@ -14,9 +16,13 @@ const routes: Routes = [
     {path:'projects/restoration', component:RestorationScreenComponent},
     {path:'projects/construction', component:ConstructionScreenComponent},
     {path:'projects/roofing', component:RoofingScreenComponent},
-    
-  ]
-}
+    {path: 'projects/:id',
+      canActivate:[ProjectDetailGuard],
+      component:DetailsScreenComponent
+    }
+
+    ]
+  }
 ];
 
 @NgModule({
