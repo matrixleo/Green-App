@@ -1,0 +1,95 @@
+h1{
+    color:white;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+mat-expansion-panel{
+    background-color: #2a2a2a;
+    padding: 0 !important;
+    margin: 0;
+}
+mat-expansion-panel /deep/ .mat-expansion-panel-body{
+    padding: 0;
+}
+mat-expansion-panel-header{
+    display: flex;
+    align-items: center;
+    margin: 0 !important;
+}
+mat-expansion-panel button{
+    width: 100%;
+    height: 50px;
+    background-color: #44463E;
+    margin: 0 !important;
+    border: none;
+    border-bottom:1px solid #829350;
+    box-shadow: none;
+    color: white;
+    display: flex;
+    justify-content: start;
+    padding-left: 20%;
+    font-size: medium;
+}
+h4{
+    color:white;
+    margin: 0; 
+    align-self: center; 
+    font-weight:lighter;
+}
+span{
+    color: white;
+    font-size: xx-large;
+}
+.mat-sidenav{
+    width: 100%;
+}
+.sidenav-c{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.mat-list-submenu{
+    display: flex;
+    flex-direction: column;
+}
+.mat-list-submenu a{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+    height: 50px;
+    margin: 0 !important;
+    padding-left: 25px;
+    color: white;
+    background-color: #44463E;
+    border: none;
+    border-bottom:1px solid #829350;
+    box-shadow: none;
+}
+.mat-list-submenu span{
+    margin-left: 20px;
+    font-size: medium;
+    
+}
+.mat-list-submenu h2{
+    color: white;
+    padding-left: 25px;
+}
+.sidenav-ct{
+    width: 100%;
+}
+#aid{
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    font-size:small;
+}
+
+/*#829350; Light Green
+#44463E; Army Green
+#2A2A2A; Primary Green
+#2A2A2A;*/

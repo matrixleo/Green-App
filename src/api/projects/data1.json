@@ -1,0 +1,92 @@
+{ 
+    "menuDetails":[
+    {
+        "name":"Home",
+        "logo": "home",
+        "link": "/home",
+        "submenu":[]
+    },
+    {
+        "name":"Projects",
+        "logo": "content_copy",
+        "link":"#",
+        "submenu":[
+            {
+                "name":"All",
+                "about":[
+                    {
+                        "name":"Settings"
+                        
+                    },
+                    {
+                        "name":"Dashboard"
+                        
+                    },
+                    {
+                        "name":"List"
+                    }
+                ],
+                "description":"The purpose of building a living space is to reconcile and reconnect and to create new means of reproduction and enjoyment in the space we inhabit. A common theme of this blog post is the following: we live in an environment that allows any and all people to express a range of opinions and opinions that would make a wonderful writer of works."
+            },
+            {
+                "name":"Restoration",
+                "about":[
+                    {
+                        "name":"Settings"                        
+                    },
+                    {
+                        "name":"Dashboard"
+                        
+                    },
+                    {
+                        "name":"List"
+                    }
+                ],
+                "description":"Restoration is the process of repairing or renovating a structure, often an older one, to bring it back to its original condition. This can involve a variety of activities, such as repairing or replacing damaged or deteriorated parts, cleaning and refinishing surfaces, and updating systems such as electrical and plumbing. Restoration work can be done on a variety of structures, including houses, buildings, bridges, and historical landmarks."
+            
+            },
+            {
+                "name":"Construction",
+                "about":[
+                    {
+                        "name":"Settings"
+                        
+                    },
+                    {
+                        "name":"Dashboard"
+                        
+                    },
+                    {
+                        "name":"List"
+                    }
+                ],
+                "description":"Construction is the process of building or assembling a structure, such as a house or office building. It involves a wide range of activities, including site preparation, foundation work, framing, electrical and plumbing installation, and finishing work such as painting and flooring. Construction workers may specialize in a particular type of construction, such as residential or commercial buildings."
+            
+            },
+            {
+                "name":"Roofing",
+                "about":[
+                    {
+                        "name":"Settings"
+                        
+                    },
+                    {
+                        "name":"Dashboard"
+                        
+                    },
+                    {
+                        "name":"List"
+                    }
+                ],
+                "description":"Roofing is the process of constructing or repairing the roof of a building. It involves installing materials such as shingles, tiles, or metal panels to protect the building from the elements, such as rain, snow, and wind. Roofing work can be physically demanding, as it often involves working at heights and in all weather conditions."
+            
+            }
+        ]
+    },
+    {
+        "name":"Settings",
+        "logo": "build",
+        "link": "#",
+        "submenu":[]
+    }
+]}

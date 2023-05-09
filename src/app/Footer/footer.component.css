@@ -1,0 +1,92 @@
+mat-toolbar{
+    background-color: #2A2A2A;
+    display: flex;
+    flex-direction: row;
+}
+mat-toolbar-row{
+    display: flex;
+}
+mat-list{
+    display: flex;
+}
+
+.mcc-left{
+    padding: 0 !important;
+    width: 20%;
+    background-color: #2A2A2A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-login{
+    display: flex;
+    background-color: #44463E;
+    height: 44px;
+    width: 139px;
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+}
+.btn-login /deep/ .mdc-button__label{
+    display: flex;
+    align-items: center;
+    color: #EEF3DB;
+    
+}
+.btn-login span{
+    font-size: xxx-large;
+    color:#EEF3DB;
+}
+
+.btn-logout{
+    background-color:#BBD673;
+    height: 44px;
+    border-radius: 10px;
+    margin-right: 10px;
+
+}
+.btn-logout span{
+    width:100%;
+    font-size: xx-large;
+} 
+
+.mcc-right{
+    padding: 0 !important;
+    width: 80%;
+    background-color: #2A2A2A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+mat-toolbar-row input{
+    width: 80%;
+    height: 44px;
+    background-color: #F0F2E6;
+    border: 1px solid #A2A2A2;
+    border-radius: 8px;
+    font-size: large;
+    margin-inline: 10px;
+}
+
+mat-toolbar-row h3{
+    margin-top: 0;
+    margin-top: 15px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    background: #EDF3DB;
+    border-radius: 8px;
+    padding-inline:5px;
+    font-size: medium;
+    font-weight:lighter;
+    margin-right: 10px;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 48
+  }

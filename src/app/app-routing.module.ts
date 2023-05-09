@@ -1,32 +1,36 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ScreenComponent } from './Screens/screen/screen.component';
-import { HomeScreenComponent } from './Screens/home-screen/home-screen.component';
-import { ProjectsScreenComponent } from './Screens/projects-screen/projects-screen.component';
-import { RoofingScreenComponent } from './Screens/projects-screen/roofing-screen/roofing-screen.component';
-import { RestorationScreenComponent } from './Screens/projects-screen/restoration-screen/restoration-screen.component';
-import { ConstructionScreenComponent } from './Screens/projects-screen/construction-screen/construction-screen.component';
-import {ProjectDetailGuard} from "./Screens/projects-screen/project-detail.guard";
-import {DetailsScreenComponent} from "./Screens/projects-screen/details-screen/details-screen.component";
-const routes: Routes = [
-  {path:'', component: ScreenComponent,
-  children : [
-    {path: 'home', component:HomeScreenComponent},
-    {path:'projects', component: ProjectsScreenComponent},
-    {path:'projects/restoration', component:RestorationScreenComponent},
-    {path:'projects/construction', component:ConstructionScreenComponent},
-    {path:'projects/roofing', component:RoofingScreenComponent},
-    {path: 'projects/:id',
-      canActivate:[ProjectDetailGuard],
-      component:DetailsScreenComponent
-    }
+import { HomeScreenComponent } from './Home/home-screen.component';
+import { ProjectsScreenComponent } from './Projects-Module/Projects/projects-screen.component';
+import { ProjectDetailGuard } from "./Projects-Module/Projects/project-detail.guard";
+import { MoreComponent } from './Projects-Module/Details/more.component';
+import { SettingsComponent } from './Projects-Module/Projects-Submenu/settings/settings.component';
+import { DashboardComponent } from './Projects-Module/Projects-Submenu/dashboard/dashboard.component';
+import { ListComponent } from './Projects-Module/Projects-Submenu/list/list.component';
+import { ProjectsFormComponent } from './Projects-Module/projects-form/projects-form.component';
+import { ModalDialogComponent } from './Components/hehe';
 
+const routes: Routes = 
+[
+  
+  { path: 'home', component: HomeScreenComponent },
+  { path: '', redirectTo:'home',  pathMatch: 'full'},
+  { path: 'hehe',component: ModalDialogComponent},
+  { path: 'projects/form',component: ProjectsFormComponent},
+  { path: 'projects/:id',canActivate: [ProjectDetailGuard],component: MoreComponent},
+  { path: 'projects/:type', canActivate: [ProjectDetailGuard], component: ProjectsScreenComponent,
+    children: [
+      { path: 'settings', component: SettingsComponent },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'list', component: ListComponent },
     ]
-  }
+  },
+  
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

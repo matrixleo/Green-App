@@ -1,6 +1,11 @@
 <body>
-    <div class="container">
-        <app-sidemenu class="sidemenu"></app-sidemenu>
-        <app-screen class="main"></app-screen>
-    </div>
+  <mat-sidenav-container class="msc">
+    <mat-sidenav class="mside bl" mode="side" opened>
+      <app-sidemenu></app-sidemenu>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <app-footer></app-footer>
 </body>

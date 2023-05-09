@@ -1,0 +1,23 @@
+   <h1 class="title">Shiggy Team</h1>
+   <mat-accordion class="example-headers-align" multi *ngFor="let item of projects" >
+       <mat-expansion-panel *ngIf="item.submenu" hideToggle>
+        <mat-expansion-panel-header  (click)="navigoHome(item)">
+            <span class="material-symbols-outlined">{{item.logo}}</span>
+            <h4>{{item.name}}</h4>
+        </mat-expansion-panel-header>
+        <button mat-button (click)="handleClick(submen)" *ngFor="let submen of item.submenu">{{submen.name}}</button>   
+    </mat-expansion-panel>
+    <mat-sidenav #subSidenav position="start" class="mat-sidenav bl" mode='side'[opened]="showFiller">
+        <mat-sidenav-container class="sidenav-c bl">
+            <mat-sidenav-content  class="sidenav-ct bl">
+                <mat-list class="mat-list-submenu bl" *ngIf="selectedSubmenu">
+                    <p id="aid" (click)="back()"><span class="material-symbols-outlined">arrow_back_ios</span> Go Back</p>
+                    <h2>{{selectedSubmenu.name}}</h2>
+                    <a *ngFor="let about of selectedSubmenu.about" mat-button (click)="navigateChild(selectedSubmenu, about)" >
+                        {{about.name}}
+                    </a>
+                </mat-list>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </mat-sidenav>
+</mat-accordion> 

@@ -1,19 +1,16 @@
-body {
-    height: 100%;
-}
-
 .container{
-    display:flex;
-    flex-direction: row;
-    height: 100%;
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column; 
 
 }
-.sidemenu{
-    width: 25%;
-    background-color:#2A2A2A;
-    padding: 0;
+.mside{
+    width: 20%;
 }
-.main{
-background-color: white;
-width: 100%;
+
+.msc{
+    height: calc(100vh - 64px);
+}
+app-footer{
+    height: 10vh;
 }

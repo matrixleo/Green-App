@@ -1,60 +1,50 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SidemenuComponent } from './sideMenu/sidemenu/sidemenu.component';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon'; 
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
-import {MatListModule} from '@angular/material/list';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatTableModule} from '@angular/material/table';
-import { ScreenComponent } from './Screens/screen/screen.component';
-import { HomeScreenComponent } from './Screens/home-screen/home-screen.component';
-import { ProjectsScreenComponent } from './Screens/projects-screen/projects-screen.component';
+import { SidemenuComponent } from './SideNav/sidemenu.component';
+import { HomeScreenComponent } from './Home/home-screen.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MaterialModule } from './modules/material/material.module';
-import { RoofingScreenComponent } from './Screens/projects-screen/roofing-screen/roofing-screen.component';
-import { ConstructionScreenComponent } from './Screens/projects-screen/construction-screen/construction-screen.component';
-import { RestorationScreenComponent } from './Screens/projects-screen/restoration-screen/restoration-screen.component';
-import { DetailsScreenComponent } from './Screens/projects-screen/details-screen/details-screen.component';
-
-const Ux_Modules = [
-  MatIconModule,
-  MatSidenavModule,
-  MatMenuModule,
-  MatToolbarModule,
-  MatButtonModule,
-  MatListModule,
-  MatExpansionModule,
-  MatTableModule
-]
-
-
+import { MaterialModule } from 'src/material/material.module';
+import { FooterComponent } from './Footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TeamProjectComponent } from './team-project/team-project.component';
+import { ProjectsScreenComponent } from './Projects-Module/Projects/projects-screen.component';
+import { MoreComponent } from './Projects-Module/Details/more.component';
+import { SettingsComponent } from './Projects-Module/Projects-Submenu/settings/settings.component';
+import { DashboardComponent } from './Projects-Module/Projects-Submenu/dashboard/dashboard.component';
+import { ListComponent } from './Projects-Module/Projects-Submenu/list/list.component';
+import { PrintButtonComponent } from './Components/print-button/print-button.component';
+import { ListTemplateComponent } from './Components/list-template/list-template.component';
+import { ProjectsFormComponent } from './Projects-Module/projects-form/projects-form.component'
+import { ModalDialogComponent } from'./Components/hehe'
 
 @NgModule({
   declarations: [
     AppComponent,
     SidemenuComponent,
-    ScreenComponent,
     HomeScreenComponent,
+    FooterComponent,
     ProjectsScreenComponent,
-    RoofingScreenComponent,
-    ConstructionScreenComponent,
-    RestorationScreenComponent,
-    DetailsScreenComponent,
+    TeamProjectComponent,
+    MoreComponent,
+    SettingsComponent,
+    DashboardComponent,
+    ListComponent,
+    PrintButtonComponent,
+    ListTemplateComponent,
+    ProjectsFormComponent,
+    ModalDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    Ux_Modules,
+    MaterialModule,
     HttpClientModule,
-    MaterialModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

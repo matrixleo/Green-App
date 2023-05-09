@@ -1,0 +1,25 @@
+<mat-drawer-container class="example-container" *ngIf="project">
+    <mat-drawer class="mdrw" mode="side" opened>
+      <div class="titujtDetaje">
+        <h2>{{project['number']}}</h2>
+        <h4> {{project['propertyInfo'].name | uppercase}}</h4>
+        <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+      </div>
+      <mat-list class="sideDetailsList">
+        <mat-list-item class="sideDetails"><a mat-button><span class="material-symbols-outlined">notifications_active</span> Dashboard</a></mat-list-item>
+        <mat-list-item class="sideDetails"><a mat-button (click)="setComponent('details')"><span class="material-symbols-outlined">notifications_active</span> Details</a></mat-list-item>
+        <mat-list-item class="sideDetails"><a mat-button (click)="setComponent('team')"><span class="material-symbols-outlined">notifications_active</span> Team</a></mat-list-item>
+        <mat-list-item class="sideDetails"><a mat-button><span class="material-symbols-outlined">notifications_active</span> Daily report</a></mat-list-item>
+        <mat-list-item class="sideDetails"><a mat-button><span class="material-symbols-outlined">notifications_active</span> Budget</a></mat-list-item>
+        <mat-list-item class="sideDetails"><a mat-button><span class="material-symbols-outlined">notifications_active</span> Bills</a></mat-list-item>
+        <mat-list-item class="sideDetails"><a mat-button><span class="material-symbols-outlined">notifications_active</span> Close Out Report</a></mat-list-item>
+        <mat-list-item class="sideDetails"><a mat-button><span class="material-symbols-outlined">notifications_active</span> Invoices</a></mat-list-item>
+        <mat-list-item class="sideDetails"><a mat-button><span class="material-symbols-outlined">notifications_active</span> Attachments</a></mat-list-item>
+      </mat-list>
+    </mat-drawer>
+
+    <ng-container [ngSwitch]="componentName">
+      <!-- <app-details-project *ngSwitchCase="'details'" [project]="project"></app-details-project>
+      <app-team-project *ngSwitchCase="'team'" [project]="project" ></app-team-project> -->
+    </ng-container>
+  </mat-drawer-container>

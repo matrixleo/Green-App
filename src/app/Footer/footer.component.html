@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <mat-toolbar-row class="mcc-left">
+        <a mat-button class="btn-login"><span class="material-symbols-outlined">person</span>Login</a>
+        <button mat-button class="btn-logout"><span class="material-symbols-outlined">logout</span></button>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="mcc-right">
+        <input [(ngModel)]="searchProject" (ngModelChange)="onSearch()" placeholder="Search">
+        <mat-list>
+            <button matbutton class="btn-logout"><span class="material-symbols-outlined">keyboard_alt</span></button>
+            <button matbutton class="btn-logout"><span class="material-symbols-outlined">history</span></button>
+        </mat-list>
+        <h3>{{dateTime | date:'hh:mm:ss'}}</h3>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
